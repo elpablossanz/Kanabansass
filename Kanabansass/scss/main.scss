@@ -1,0 +1,89 @@
+@import '_funciones';
+@import '_variables';
+
+
+*{
+    box-sizing: border-box;
+    font-family: $fuente;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+main{
+    background-image: url(../img/pradera.jpg);
+    overflow: hidden;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    h1{
+        color: $blanco;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: $azul_transparente; 
+        border-radius: 10px;
+        display: block;
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    
+    }
+}
+
+.tabla{
+    margin:5px;
+    @include calc;
+    border-radius: 10px;
+    float: left;
+    background-color: $fondo_tabla;
+    .tarjeta{
+        border-radius: 10px;
+        background-color: $blanco;
+        margin: 10px;
+        padding: 2px;
+        height: 120px;
+        h3{
+            @include h3andp;
+        }
+        p{
+            @include h3andp;
+        }
+        .fa-circle-xmark{
+            float: right;
+            color: $rojo;
+        
+        }
+        .tags{
+            margin-left:10px;
+            .front{
+                @include tag($fondo_desck);              
+            }
+            
+            .back{
+               @include tag($rojo);
+            }
+            .device{
+                @include tag;
+            }
+
+        }
+    }
+}
+h2{
+    font-size: 19px;
+}
+.tarjeta:hover .fa-solid {
+    color: $azul_transparente; 
+    
+}
+.tarjeta:hover .fa-circle-xmark{
+    color: $hover_cruz
+    
+}
+.tarjeta:hover{
+    background-color: $azul_transparente;
+    color: $fondo_tabla;
+}

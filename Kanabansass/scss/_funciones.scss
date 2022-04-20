@@ -1,0 +1,17 @@
+
+@mixin h3andp {
+    padding: 3px;
+    font-size: 15px;
+    margin: 12px;
+}
+@mixin tag($tag: coral){
+    display: inline;
+    color: white;
+    background-color: $tag;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+@mixin calc {
+    width: calc(20% - 20px);
+}
